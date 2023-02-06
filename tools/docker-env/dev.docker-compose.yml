@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  fullstack-db:
+    image: postgres
+    ports:
+      - '5433:5432'
+    volumes:
+      - fullstack-db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: musecretpassword
+      PGDATA: /car/lib/postgresql/data/data
+
+volumes:
+  fullstack-db:  
